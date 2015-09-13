@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+## vim复制与粘贴
+
+* **复制粘贴选中字符串**: 命令行模式下在按下v就会从光标处开始选择,通过移动光标选中要选择的字符，按下y表示复制，按下d表示剪切，最后在要粘贴的地方按下p即可。 
+* **复制行 yy**:  
+ *  在要复制的行按下yy即可复制相应的行，在要粘贴的地方按下p。 
+ *  在某行按下数字加上yy 表示复制光标处所在行及其以下共n行，如2yy表示复制当前行和其下一行共两行。 
+ *  在当前光标处按下y$表示复制到行尾，按下y^表示从当前位置复制到行首。 
+* **剪切行 dd** 
+ *  dd可以剪切光标所在处的一行，ndd表示可以剪切n行。 
+ *  d$剪切从当前位置到行尾，d^剪切从当前位置到行首。
+## vim分屏
+在写代码的时候分屏可以带给我们很大便利，比如C++代码中时常进行类的实现时会忘记定义中声明的函数，可以开两个屏以便于我们进行code。
+##### 分屏相关
+* 在命令行模式下可以通过 **:new** 进行分屏，new后可以跟一个文件名，在新分出的屏中即可实现打开或新建相应的文件。快捷键ctrl+w，然后按下n键。
+* **:split**    表示水平分屏，分为上下两个屏，后可跟文件名。 
+* **:vsplit**  表示垂直分屏，分为左右两个屏，后可跟文件名。 
+* **:only**    表示取消分屏，取消当前光标所在的屏。 
+* **ctrl+w,c**关闭当前屏。和上一个:only结果一样。 
+* **ctrl+w,o**也是关闭。
+##### 载入文件
+* **:vs**  文件路径/文件名      在新的垂直分屏中打开文件 
+* **:sv**  文件路径/文件名      在新的水平分屏中打开文件
+##### 切换各屏快捷键
+* **Ctrl + w, w** 切换到后一个屏。
+* **Ctrl + w, p**  切换到前一个屏。 
+*  四个方向切换屏,其中h，i，k，l可以替换为各相应的方向键。
+ * **Ctrl + w, h**
+ * **Ctrl + w, i**
+ * **Ctrl + w, k**
+ * **Ctrl + w, l**
+
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<h2 id="vim">vim复制与粘贴</h2>
+
+<ul>
+<li><strong>复制粘贴选中字符串</strong>: 命令行模式下在按下v就会从光标处开始选择,通过移动光标选中要选择的字符，按下y表示复制，按下d表示剪切，最后在要粘贴的地方按下p即可。 </li>
+<li><strong>复制行 yy</strong>: <br>
+<ul><li>在要复制的行按下yy即可复制相应的行，在要粘贴的地方按下p。 </li>
+<li>在某行按下数字加上yy 表示复制光标处所在行及其以下共n行，如2yy表示复制当前行和其下一行共两行。 </li>
+<li>在当前光标处按下y$表示复制到行尾，按下y^表示从当前位置复制到行首。 </li></ul></li>
+<li><strong>剪切行 dd</strong> 
+<ul><li>dd可以剪切光标所在处的一行，ndd表示可以剪切n行。 </li>
+<li>d$剪切从当前位置到行尾，d^剪切从当前位置到行首。</li></ul></li>
+</ul>
+
+<h2 id="vim">vim分屏</h2>
+
+<p>在写代码的时候分屏可以带给我们很大便利，比如C++代码中时常进行类的实现时会忘记定义中声明的函数，可以开两个屏以便于我们进行code。</p>
+
+<h5 id="">分屏相关</h5>
+
+<ul>
+<li>在命令行模式下可以通过 <strong>:new</strong> 进行分屏，new后可以跟一个文件名，在新分出的屏中即可实现打开或新建相应的文件。快捷键ctrl+w，然后按下n键。</li>
+<li><strong>:split</strong>    表示水平分屏，分为上下两个屏，后可跟文件名。 </li>
+<li><strong>:vsplit</strong>  表示垂直分屏，分为左右两个屏，后可跟文件名。 </li>
+<li><strong>:only</strong>    表示取消分屏，取消当前光标所在的屏。 </li>
+<li><strong>ctrl+w,c</strong>关闭当前屏。和上一个:only结果一样。 </li>
+<li><strong>ctrl+w,o</strong>也是关闭。</li>
+</ul>
+
+<h5 id="">载入文件</h5>
+
+<ul>
+<li><strong>:vs</strong>  文件路径/文件名      在新的垂直分屏中打开文件 </li>
+<li><strong>:sv</strong>  文件路径/文件名      在新的水平分屏中打开文件</li>
+</ul>
+
+<h5 id="">切换各屏快捷键</h5>
+
+<ul>
+<li><strong>Ctrl + w, w</strong> 切换到后一个屏。</li>
+<li><strong>Ctrl + w, p</strong>  切换到前一个屏。 </li>
+<li>四个方向切换屏,其中h，i，k，l可以替换为各相应的方向键。
+<ul><li><strong>Ctrl + w, h</strong></li>
+<li><strong>Ctrl + w, i</strong></li>
+<li><strong>Ctrl + w, k</strong></li>
+<li><strong>Ctrl + w, l</strong></li></ul></li>
+</ul>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "vim.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
